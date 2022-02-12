@@ -1,12 +1,12 @@
 ---
 downloads: ~/.ansible-downloads/
 
-configure_dotfiles: true
-configure_terminal: true
-configure_osx: true
+configure_dotfiles: false
+configure_terminal: false
+configure_osx: false
 
 # Set to 'true' to configure the Dock via dockutil.
-configure_dock: false
+configure_dock: true
 dockitems_remove: []
 # - Launchpad
 # - TV
@@ -24,9 +24,10 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+# dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: ''
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: ~/dev/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
@@ -36,32 +37,20 @@ dotfiles_files:
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
   - git
-  - github/gh/gh
+  - gh
   - go
   - gpg
-  - httpie
-  - iperf
-  - libevent
   - sqlite
   - mcrypt
-  - nmap
   - node
   - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
+  - yarn
+  - php@7.4
   - openssl
-  - pv
   - wget
-  - wrk
-  - zsh-history-substring-search
+  - fzf
+  - zstd
 
 homebrew_taps:
   - homebrew/core
@@ -69,18 +58,16 @@ homebrew_taps:
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
-  - chromedriver
+  - iterm2
   - docker
-  - dropbox
-  - firefox
   - google-chrome
-  - handbrake
-  - licecap
-  - sequel-ace
   - slack
-  - sublime-text
-  - transmit
-  - vagrant
+  - alfred
+  - jetbrains-toolbox
+  - visual-studio-code
+  - notion
+  - spotify
+  - tunnelblick
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
